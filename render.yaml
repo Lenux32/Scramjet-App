@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: scramjet-app
+    runtime: node
+    region: oregon
+    plan: starter
+    buildCommand: pnpm install --frozen-lockfile
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_ENV
+        value: production
